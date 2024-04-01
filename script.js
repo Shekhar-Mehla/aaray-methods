@@ -78,3 +78,76 @@ output will be false because 10 is not in the array.
 const join_ = array.join("/");
 console.log(join_);
 /* join method is not only convert the array to string but also give us the more control to add seprator in the string which can be helpful to convert back in array in the same pattern. */
+
+// new challaenga for javascripts arrays.
+
+// / Challange #1
+// 1. create an array of 50 random numbers range between 1 and 100 programmatically
+
+const Numlist = [];
+for (let i = 0; i < 50; i++) {
+  let randumNumber = Math.floor(Math.random() * 100);
+  Numlist.push(randumNumber);
+}
+console.log(Numlist);
+
+//2. sort the array in descending order
+
+const SortedArray = Numlist.sort();
+console.log(SortedArray);
+const desendingArray = SortedArray.reverse();
+console.log(desendingArray);
+
+//3. get total of the array
+const SumOfArray = desendingArray.reduce((sum, itemvalue) => {
+  return sum + itemvalue;
+}, 0);
+console.log(SumOfArray);
+
+//4.Divide original array in to 2 new arrays that contains even or odd numbers only each.
+// note this is the original array i just copy pasted from console
+// const originalArray = [
+//   21, 47, 62, 78, 20, 33, 83, 33, 10, 1, 71, 19, 72, 74, 45, 85, 85, 10, 43, 31,
+//   57, 83, 87, 50, 83, 62, 89, 66, 17, 70, 96, 28, 71, 91, 74, 55, 85, 61, 52,
+//   29, 5, 2, 49, 51, 4, 79, 10, 44, 85, 4,
+// ];
+// const oddNumber = originalArray.filter((item) => !(item % 2 === 0));
+// console.log(oddNumber);
+// // output is
+// // oddNumber =(20) [62, 78, 20, 10, 72, 74, 10, 50, 62, 66, 70, 96, 28, 74, 52, 2, 4, 10, 44, 4]
+
+// const evenNumber = originalArray.filter((item) => item % 2 === 0);
+// console.log(evenNumber);
+
+// /*
+// output is
+// evenNumber = [62, 78, 20, 10, 72, 74, 10, 50, 62, 66, 70, 96, 28, 74, 52, 2, 4, 10, 44, 4]
+
+// 5. remove duplicate number for the original array
+
+// const originalArray = [
+//   21, 47, 62, 78, 20, 33, 83, 33, 10, 1, 71, 19, 72, 74, 45, 85, 85, 10, 43, 31,
+//   57, 83, 87, 50, 83, 62, 89, 66, 17, 70, 96, 28, 71, 91, 74, 55, 85, 61, 52,
+//   29, 5, 2, 49, 51, 4, 79, 10, 44, 85, 4,
+// ];
+// const uniq = [];
+// const UniqueArray = originalArray.filter((item) => {
+//   if (uniq.includes(item)) {
+//     return false;
+//   } else {
+//     uniq.push(item);
+//   }
+// });
+// console.log(uniq);
+// // output
+// // uniq = (38) [21, 47, 62, 78, 20, 33, 83, 10, 1, 71, 19, 72, 74, 45, 85, 43, 31, 57, 87, 50, 89, 66, 17, 70, 96, 28, 91, 55, 61, 52, 29, 5, 2, 49, 51, 4, 79, 44]
+
+// // Challange #2 create unique array 50 numbers rang between 1 and 100 programmatically
+const Uniquelist = [];
+for (let i = 0; Uniquelist.length < 50; i++) {
+  const radndonum = Math.floor(Math.random() * 100);
+  if (!Uniquelist.includes(radndonum)) {
+    Uniquelist.push(radndonum);
+  }
+}
+console.log(Uniquelist);
